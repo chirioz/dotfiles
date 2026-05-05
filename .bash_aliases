@@ -23,6 +23,7 @@ alias hdashboard='/home/fchairezd/finance/hledger/dashboard.sh'
 # Bashrc
 alias bashrc='nvim ~/.bashrc'
 alias loadbash='source ~/.bashrc'
+alias aliases='nvim ~/.bash_aliases'
 
 # Utilidad
 alias cat='bat'
@@ -57,3 +58,12 @@ alias inbox='l ~/notes/inbox/ && cd ~/notes/inbox/'
 alias dg='l ~/notes/digital_garden/ && cd ~/notes/digital_garden/'
 alias journal='l ~/notes/journal/ && cd ~/notes/journal/'
 alias uni='l ~/notes/universidad/cursos/ && cd ~/notes/universidad/cursos/'
+
+# Buscador fzf inteligente
+fif() {
+  if [ ! "$#" -gt 0 ]; then
+    echo "Need a string to search for!"
+    return 1
+  fi
+  rg --files-with-matches --no-messages "./$1" | fzf --preview "rg --ignore-case --pretty --context 10 '$1' {}"
+}
