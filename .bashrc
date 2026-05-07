@@ -79,21 +79,23 @@ fi
 export LEDGER_FILE="$HOME/finance/hledger/2026.journal"
 
 # MOTD
-clear
-
 case "$HOSTNAME" in
 arsia)
+  clear
   [ -f ~/.welcome ] && cat ~/.welcome
   echo ""
   command -v tpendientes &>/dev/null && tpendientes
   echo ""
   command -v landscape-sysinfo &>/dev/null && landscape-sysinfo
+  echo ""
   ;;
 tharsys.club)
   # Respetar el MOTD del tilde club
+  echo ""
   ;;
 *)
   # Local, WSL, otros — sin MOTD
+  echo ""
   ;;
 esac
 
