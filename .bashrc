@@ -102,6 +102,8 @@ esac
 # Aliases and Completions
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+[ -f ~/.bash_aliases_extra ] && . ~/.bash_aliases_extra
+
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
