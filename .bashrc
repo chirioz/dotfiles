@@ -111,3 +111,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# opencode
+export PATH=/home/fchairezd/.opencode/bin:$PATH
