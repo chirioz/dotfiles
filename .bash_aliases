@@ -5,7 +5,7 @@ fi
 
 # My aliases
 # Base tools
-if coommand -v eza &>/dev/null; then
+if command -v eza &>/dev/null; then
   alias ls='eza -F --group-directories-first --sort=modified --icons=auto --color=auto'
   alias ll='eza -lhgF --group-directories-first --sort=modified --icons=auto'
   alias la='eza -alhgF --group-directories-first --sort=modified --icons=auto'
