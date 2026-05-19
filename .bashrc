@@ -54,6 +54,13 @@ xterm* | rxvt* | alacritty* | foot*)
   ;;
 esac
 
+# Integración OSC 7 (Tabby/WezTerm pwd tracking)
+_report_pwd() {
+  printf "\e]1337;CurrentDir=%s\007" "$PWD"
+  printf "\033]7;file://%s%s\033\\" "$HOSTNAME" "$PWD"
+}
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }_report_pwd"
+
 # PATH
 _add_path() {
   [ -d "$1" ] && PATH="$1:$PATH"
