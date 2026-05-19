@@ -67,9 +67,6 @@ alias inbox='l ~/notes/inbox/ && cd ~/notes/inbox/'
 alias dg='l ~/notes/digital_garden/ && cd ~/notes/digital_garden/'
 alias journal='l ~/notes/journal/ && cd ~/notes/journal/'
 alias uni='l ~/notes/universidad/cursos/ && cd ~/notes/universidad/cursos/'
-
-alias bat='batcat'
-
 # Buscador fzf inteligente
 fif() {
   if [ ! "$#" -gt 0 ]; then
