@@ -49,8 +49,9 @@ function n() {
     #l "$HOME/notes/"
     (cd "$HOME/notes" && find . -path "*/.*" -prune -o -type f -print0 | xargs -0 eza -1 --sort=modified --color=always --icons=always | tail -n 20)
   elif [ "$1" = "s" ] || [ "$1" = "o" ]; then
-    local busqueda="${*:2}"
-    (cd "$HOME/notes" && archivo=$(fzf --query="$busqueda" --preview 'bat --color=always --style=numbers --line-range=:500 {}' --prompt="Notas> ") && [ -n "$archivo" ] && nvim "$archivo")
+    #local busqueda="${*:2}"
+    #(cd "$HOME/notes" && archivo=$(fzf --query="$busqueda" --preview 'bat --color=always --style=numbers --line-range=:500 {}' --prompt="Notas> ") && [ -n "$archivo" ] && nvim "$archivo")
+    nvim ~/notes -c :ObsidianQuickSwitch
   elif [ "$1" = "n" ]; then
     nvim -c "ObsidianNew $2"
   elif [ "$1" = "d" ]; then
@@ -62,11 +63,13 @@ function n() {
 alias nn='n n'
 alias nd='n d'
 alias no='n o'
-alias obsidian='nvim ~/notes'
+alias obsidian='nvim ~/notes -c :ObsidianQuickSwitch'
 alias inbox='l ~/notes/inbox/ && cd ~/notes/inbox/'
 alias dg='l ~/notes/digital_garden/ && cd ~/notes/digital_garden/'
 alias journal='l ~/notes/journal/ && cd ~/notes/journal/'
 alias uni='l ~/notes/universidad/cursos/ && cd ~/notes/universidad/cursos/'
+
+
 # Buscador fzf inteligente
 fif() {
   if [ ! "$#" -gt 0 ]; then
