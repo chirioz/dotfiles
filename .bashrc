@@ -122,3 +122,4 @@ fi
 
 # opencode
 export PATH=/home/fchairezd/.opencode/bin:$PATH
+export PATH="$PATH:$HOME/.dotnet/tools"
