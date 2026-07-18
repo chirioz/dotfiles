@@ -44,4 +44,4 @@ Para tmux:
 ./tmux_start.sh
 ```
 
-> [!warning] No es un instalador automático de todo el entorno — es mi referencia personal. Tómalo como ejemplo, no como algo listo para ejecutar a ciegas en tu máquina.
+> No es un instalador automático de todo el entorno — es mi referencia personal. Tómalo como ejemplo, no como algo listo para ejecutar a ciegas en tu máquina.
