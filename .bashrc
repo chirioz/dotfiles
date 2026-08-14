@@ -61,6 +61,11 @@ _report_pwd() {
 }
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }_report_pwd"
 
+# fastfetch
+if command -v fastfetch &>/dev/null; then
+  fastfetch
+fi
+
 # PATH
 _add_path() {
   [ -d "$1" ] && PATH="$1:$PATH"
