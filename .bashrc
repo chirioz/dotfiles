@@ -76,6 +76,7 @@ _add_path "$HOME/.npm-global/bin"
 _add_path "/usr/local/go/bin"
 _add_path "$HOME/.cargo/bin"
 _add_path "/opt/nvim-linux-x86_64/bin"
+_add_path "/opc/"
 
 [ "$DISTRO" = "ubuntu" ] && _add_path "/snap/bin"
 
